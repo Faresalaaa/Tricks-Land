@@ -1,0 +1,252 @@
+/* =========================================================
+   MAIN.CSS — Tricks Land Project
+   Extracted from Figma design (Tricks Land landing page)
+   Use alongside Bootstrap: include Bootstrap CSS first,
+   then this file, so these styles/overrides apply on top.
+   ========================================================= */
+
+/* 1) Font ---------------------------------------------------
+   The design uses "Roboto". Add this in your <head> BEFORE
+   linking main.css:
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet">
+------------------------------------------------------------ */
+
+:root {
+    /* ---- Colors ---- */
+    --color-primary: #ea580c;
+    /* Orange 600 - main CTA buttons */
+    --color-primary-light: #fb923c;
+    /* Orange 400 - accents/hover */
+    --color-secondary: #2563eb;
+    /* Blue 600 - links, secondary actions */
+    --color-accent: #facc15;
+    /* Yellow 400 - highlight numbers/stats */
+    --color-dark: #0f172a;
+    /* Blue Gray 900 - headings & body text */
+    --color-white: #ffffff;
+    --color-muted: #475569;
+    /* Blue Gray 600 - logo/secondary text */
+
+    /* ---- Typography ---- */
+    --font-base: 'Roboto', sans-serif;
+
+    --fs-h1: 4.5rem;
+    /* 72px - Hero heading */
+    --fs-h2: 3.5rem;
+    /* 56px - Section heading */
+    --fs-h3: 2rem;
+    /* 32px - Sub-section heading */
+    --fs-body-xxl: 1.5rem;
+    /* 24px - Lead / large body text */
+    --fs-body: 1rem;
+    /* 16px - Standard body/nav text */
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+
+    --lh-heading: 1.1;
+    --lh-body: 1.6;
+    --letter-spacing-btn: 0.5px;
+
+    /* ---- Spacing & Layout ---- */
+    --section-padding-x: 80px;
+    --section-padding-y: 80px;
+    --radius-base: 8px;
+
+    /* ---- Bootstrap overrides (optional) ----
+     Uncomment if you want Bootstrap components (btn-primary,
+     text-primary, etc.) to automatically match this palette. */
+    /*
+  --bs-primary: var(--color-primary);
+  --bs-primary-rgb: 234, 88, 12;
+  --bs-body-color: var(--color-dark);
+  --bs-body-font-family: var(--font-base);
+  --bs-border-radius: var(--radius-base);
+  */
+}
+
+/* 2) Base / Reset -------------------------------------------------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-base);
+    color: var(--color-dark);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-body);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* 3) Typography ------------------------------------------------------ */
+h1,
+.h1 {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-extrabold);
+    line-height: var(--lh-heading);
+    color: var(--color-dark);
+    margin: 0;
+}
+
+h2,
+.h2 {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-extrabold);
+    line-height: var(--lh-heading);
+    color: var(--color-dark);
+    margin: 0;
+}
+
+h3,
+.h3 {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-heading);
+    color: var(--color-dark);
+    margin: 0;
+}
+
+.lead,
+.text-xxl {
+    font-size: var(--fs-body-xxl);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-body);
+}
+
+p {
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    margin: 0 0 1rem 0;
+}
+
+/* 4) Buttons -----------------------------------------------------------
+   These are extra classes for the custom button styles used in the
+   design. Pair with Bootstrap's `.btn` base class, e.g.:
+   <button class="btn btn-brand-primary">Sign Up Now</button>
+------------------------------------------------------------------------ */
+
+.btn-brand-primary {
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    color: var(--color-white);
+    font-family: var(--font-base);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-body-xxl);
+    letter-spacing: var(--letter-spacing-btn);
+    border-radius: var(--radius-base);
+    padding: 20px 24px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-brand-primary:hover {
+    background-color: var(--color-primary-light);
+    border-color: var(--color-primary-light);
+    color: var(--color-white);
+}
+
+.btn-brand-outline {
+    background-color: transparent;
+    border: 2px solid var(--color-dark);
+    color: var(--color-dark);
+    font-family: var(--font-base);
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-body);
+    letter-spacing: var(--letter-spacing-btn);
+    border-radius: var(--radius-base);
+    padding: 12px 16px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-brand-outline:hover {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+
+.btn-brand-text {
+    background: none;
+    border: none;
+    color: var(--color-secondary);
+    font-family: var(--font-base);
+    font-weight: var(--fw-medium);
+    font-size: 1.25rem;
+    /* 20px */
+    letter-spacing: var(--letter-spacing-btn);
+    padding: 16px 8px;
+}
+
+.btn-brand-text:hover {
+    text-decoration: underline;
+}
+
+/* 5) Header / Navbar --------------------------------------------------- */
+.navbar-brand-custom {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: 24px var(--section-padding-x);
+}
+
+.nav-link-custom {
+    font-family: var(--font-base);
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-body);
+    letter-spacing: var(--letter-spacing-btn);
+    color: var(--color-dark);
+    padding: 12px 8px;
+}
+
+.logo-text {
+    font-family: var(--font-base);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h3);
+    color: var(--color-muted);
+}
+
+/* 6) Sections / Layout helpers ------------------------------------------ */
+.section {
+    padding: var(--section-padding-y) var(--section-padding-x);
+}
+
+.container-custom {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* 7) Cards / Content Boxes ----------------------------------------------
+   Used for stat blocks like "195 user countries"
+--------------------------------------------------------------------------- */
+.stat-number {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-extrabold);
+    line-height: var(--lh-heading);
+    color: var(--color-accent);
+    text-align: center;
+}
+
+.stat-label {
+    font-size: var(--fs-body-xxl);
+    font-weight: var(--fw-regular);
+    color: var(--color-accent);
+    text-align: center;
+}
+
+.content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
