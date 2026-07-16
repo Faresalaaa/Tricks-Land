@@ -1,0 +1,13 @@
+
+.card{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px 10px;
+    width: 35%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card__img{
+    display: flex;
+    gap: 20px;
+}
