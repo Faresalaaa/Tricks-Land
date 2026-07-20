@@ -7,7 +7,7 @@ function initMarquee() {
     if (!marqueeContent || typeof gsap === 'undefined') return;
 
     // نسخ العناصر للحركة السلسة
-    const items = marqueeContent.querySelectorAll('.Carousel__cards--card');
+    const items = marqueeContent.querySelectorAll('.partner-card');
     items.forEach(item => {
         const clone = item.cloneNode(true);
         marqueeContent.appendChild(clone);
@@ -62,3 +62,11 @@ function initGSAPAnimations() {
 }
 
 
+/**
+ * Initialize all animations
+ */
+function initAnimations() {
+    initMarquee();
+    initGSAPAnimations();
+    initParticles();
+}
