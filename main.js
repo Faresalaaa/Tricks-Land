@@ -3,11 +3,11 @@
  * أنيميشن الشركاء المتحركة باستخدام GSAP والـ Scroll
  */
 function initMarquee() {
-    const marqueeContent = document.getElementById('marqueeContent');
+    const marqueeContent = document.getElementById('CarouselmarqueeContent');
     if (!marqueeContent || typeof gsap === 'undefined') return;
 
     // نسخ العناصر للحركة السلسة
-    const items = marqueeContent.querySelectorAll('.partner-card');
+    const items = marqueeContent.querySelectorAll('.Carousel__card');
     items.forEach(item => {
         const clone = item.cloneNode(true);
         marqueeContent.appendChild(clone);

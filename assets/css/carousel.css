@@ -1,10 +1,10 @@
-.partners-section {
-    background: #fff;
-    padding: 4rem 0;
+.Carousel {
+    padding:50px 0;
+    background:#fff7ed;
     text-align: center;
 }
 
-.marquee-wrapper {
+.Carousel__marquee-wrapper {
     overflow: hidden;
     background: linear-gradient(135deg, rgba(0, 102, 204, 0.04), rgba(0, 145, 213, 0.04));
     border-radius: 12px;
@@ -13,15 +13,15 @@
     position: relative;
 }
 
-.marquee-content {
+.Carousel__marquee-content {
     display: flex;
     gap: 1.5rem;
-    padding: 0 1.5rem;
-    width: 25%;
+    padding: 10px 10px;
+    width: 110%;
     animation: marquee 30s linear infinite;
 }
 
-.marquee-content:hover {
+.Carousel__marquee-content:hover {
     animation-play-state: paused;
 }
 
@@ -35,25 +35,56 @@
     }
 }
 
-.partner-card {
-    flex: 0 0 auto;
-    min-width: 180px;
-    padding: 1.4rem 1.8rem;
-    border: 1px solid #e6eef5;
-    border-radius: 12px;
-    background: linear-gradient(135deg, rgba(0, 102, 204, 0.06), rgba(0, 145, 213, 0.06));
-    color: var(--text-dark);
-    font-weight: 600;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
+.carousel__card{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 40px 5px;
+    width: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.partner-card:hover {
-    transform: translateY(-5px) scale(1.02);
+.carousel__card:hover {
+    transform: translateY(-10px);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
     background: linear-gradient(135deg, rgba(0, 191, 255, 0.15), rgba(30, 144, 255, 0.15));
+}
+
+.carousel__quote{
+    font-size:70px;
+    font-weight:bold;
+    color:#f59e0b;
+    line-height:1;
+}
+
+.carousel__description{
+    color:#475569;
+    font-size:16px;
+    line-height:1.8;
+    margin:0;
+}
+
+.carousel__user{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.carousel__user img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.carousel__info h4{
+    margin:0;
+    font-size:18px;
+    color:#0f172a;
+    font-weight:700;
+}
+
+.carousel__info span{
+    color:#64748b;
+    font-size:14px;
 }
