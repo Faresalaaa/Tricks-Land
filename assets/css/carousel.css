@@ -1,90 +1,79 @@
 .Carousel {
-    padding:50px 0;
-    background:#fff7ed;
+    padding: 50px 0;
+    background: #fff7ed;
     text-align: center;
 }
 
-.Carousel__marquee-wrapper {
+.Carousel-div {
     overflow: hidden;
     background: linear-gradient(135deg, rgba(0, 102, 204, 0.04), rgba(0, 145, 213, 0.04));
     border-radius: 12px;
-    padding: 1.5rem 0;
-    margin-top: 2rem;
-    position: relative;
-}
-
-.Carousel__marquee-content {
     display: flex;
-    gap: 1.5rem;
-    padding: 10px 10px;
-    width: 110%;
-    animation: marquee 30s linear infinite;
+    padding: 1.5rem 0;
+    margin: 100px auto;
 }
 
-.Carousel__marquee-content:hover {
-    animation-play-state: paused;
+.Carousel__Group-Cards {
+    display: flex;
+    gap: 1em;
+    padding-right: 1em;
+    flex-shrink: 0;
+    animation: marquee 50s linear infinite;
 }
 
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-.carousel__card{
-    background-color: #fff;
+.Carousel__Group-Cards--card {
+    flex: 0 0 25em;
+    background-color: var(--color-white);
     border-radius: 20px;
     padding: 40px 5px;
-    width: 50%;
+    height: 15em;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.carousel__card:hover {
+.Carousel__Group-Cards--card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(135deg, rgba(0, 191, 255, 0.15), rgba(30, 144, 255, 0.15));
+    box-shadow: 0 12px 28px var(--color-dark);
 }
 
-.carousel__quote{
-    font-size:70px;
-    font-weight:bold;
-    color:#f59e0b;
-    line-height:1;
+.carousel__description {
+    color: var(--color-muted);
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 1;
 }
 
-.carousel__description{
-    color:#475569;
-    font-size:16px;
-    line-height:1.8;
-    margin:0;
+.carousel__user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.carousel__user{
-    display:flex;
-    align-items:center;
-    gap:15px;
+.carousel__user img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.carousel__user img{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    object-fit:cover;
+.carousel__info h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #0f172a;
+    font-weight: 700;
 }
 
-.carousel__info h4{
-    margin:0;
-    font-size:18px;
-    color:#0f172a;
-    font-weight:700;
+.carousel__info span {
+    color: #64748b;
+    font-size: 14px;
 }
 
-.carousel__info span{
-    color:#64748b;
-    font-size:14px;
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 1em));
+    }
 }
