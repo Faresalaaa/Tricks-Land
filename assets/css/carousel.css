@@ -31,6 +31,10 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.Carousel__Group-Cards:hover {
+    animation-play-state: paused;
+}
+
 .Carousel__Group-Cards--card:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 28px var(--color-dark);
